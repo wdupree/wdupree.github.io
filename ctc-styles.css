@@ -1,0 +1,64 @@
+h6 {
+    margin: 1em .5em;
+}
+
+table.dataTable tbody tr.even {
+    background-color: #8631b4;
+}
+
+table.dataTable tbody tr.odd {
+    background-color: #2e44da;
+}
+
+table.dataTable tbody tr td {
+    color: white !important;
+}
+
+div.tableOverflow {
+    max-height: 320px;
+    overflow: auto;
+}
+
+tr.ctcBlue {
+    background-color: #89b8fa;
+}
+
+tr.ctcGreen {
+    background-color: #ace039;
+}
+
+tr.ctcRed {
+    background-color: #d71018;
+}
+
+tr.ctcRed>td,
+tr.ctcOrange>td,
+tr.ctcPurple>td,
+tr.ctcBlack>td,
+tr.ctcGray>td {
+    color: white !important;
+}
+
+tr.ctcOrange {
+    background-color: #df7129;
+}
+
+tr.ctcYellow {
+    background-color: #f1cf20;
+}
+
+tr.ctcPurple {
+    background-color: #c637ea;
+}
+
+tr.ctcBlack {
+    background-color: black;
+}
+
+tr.ctcWhite {
+    background-color: white;
+}
+
+tr.ctcGray {
+    background-color: #5f5f5f;
+}
