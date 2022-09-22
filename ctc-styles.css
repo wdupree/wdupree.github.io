@@ -1,5 +1,17 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
 h6 {
     margin: 1em .5em;
+}
+
+hr {
+    margin: 20px auto;
+    border-top-width: 1px;
+    border-top-color: black;
+    border-top-style: solid;
+    width: 65%;
 }
 
 table.dataTable tbody tr.even {
