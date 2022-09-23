@@ -26,8 +26,21 @@ table.dataTable tbody tr td {
     color: white !important;
 }
 
+h1.display-4.text-center {
+    padding: 15px 0 0 0;
+}
+
+div.stats-header,
+div.card {
+    margin-bottom: 25px;
+}
+
+div.text-end.small {
+    margin: 0 0 20px 0;
+}
+
 div.tableOverflow {
-    max-height: 320px;
+    max-height: 250px;
     overflow: auto;
 }
 
