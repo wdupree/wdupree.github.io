@@ -16,6 +16,32 @@ hr {
     width: 65%;
 }
 
+.card-body hr {
+    margin: 20px auto;
+    border-top-width: 1px;
+    border-top-color: black;
+    border-top-style: solid;
+    width: 85%;
+}
+
+div.stats-header,
+div.card {
+    margin-bottom: 25px;
+    color: black;
+}
+
+div.card.card-header {
+    background-color: lightslategray;
+}
+
+div.card.card-body {
+    background-color: #f9f9f9;
+}
+
+div.text-end.small {
+    margin: 0 0 20px 0;
+}
+
 table {
     margin-bottom: 0 !important;
 }
@@ -32,26 +58,25 @@ table.dataTable tbody tr td {
     color: white !important;
 }
 
+table a {
+    color: white;
+    text-decoration: none;
+}
+
+table a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+table div.card.card-body {
+    background-color: transparent;
+    border: none;
+    color: white;
+    margin-bottom: 0;
+}
+
 h1.display-4.text-center {
     padding: 15px 0 0 0;
-}
-
-div.stats-header,
-div.card {
-    margin-bottom: 25px;
-    color: black;
-}
-
-div.card .card-header {
-    background-color: lightslategray;
-}
-
-div.card .card-body {
-    background-color: #f9f9f9;
-}
-
-div.text-end.small {
-    margin: 0 0 20px 0;
 }
 
 div.table-overflow {
