@@ -7,15 +7,33 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
         crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/base-styles.min.css">
     <title>Wayne's GitHub Home Page</title>
 </head>
 
 <body>
-    <h1>Welcome to my GitHub Page!</h1>
-    <p>This is the main page for my GitHub pages. From here, you can go to the following places:</p>
-    <ul>
-        <li><a href="ctc-statistics.html">Cracking the Cryptic Statistics Page</a></li>
-    </ul>
+    <div class="container">
+        <h1>Welcome to my GitHub Page!</h1>
+        <p>This is the main page for my GitHub pages. From here, you can go to the following places:</p>
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="images/CtC-Logo.png" class="card-img-top" alt="Cracking the Cryptic Statistics">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Cracking the Cryptic Statistics Page</h5>
+                        <p class="card-text">This page is a public rendering of the data created from the Cracking
+                            the Cryptic application (<a
+                                href="https://waynedupree.visualstudio.com/CtC%20Simarkism%20Analyzer"
+                                target="_blank">repo here</a>) I made to parse all of statistics in "Inspiring Sand's"
+                            comments on their YouTube videos.
+                        </p>
+                        <a href="ctc-statistics.html" class="btn btn-primary">Cracking the Cryptic Statistics Page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>
