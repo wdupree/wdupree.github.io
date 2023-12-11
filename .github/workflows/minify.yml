@@ -6,10 +6,10 @@ name: minify
 run-name: Minify JS/CSS [github-pages branch]
 
 # Run on pushes to `github-pages` branch
-on:
-  push:
-    branches:
-      - 'master'
+#on:
+#  push:
+#    branches:
+#      - 'master'
 
 jobs:
   checkout-minify-push:
