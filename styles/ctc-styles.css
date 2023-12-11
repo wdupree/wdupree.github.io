@@ -8,6 +8,16 @@ a:hover {
     color: darkcyan;
 }
 
+#simarkismStats a:link,
+#simarkismStats a:active,
+#simarkismStats a:visited {
+    color: white;
+}
+
+#simarkismStats a:hover {
+    color: cyan;
+}
+
 h6 {
     margin: 1em .5em;
 }
