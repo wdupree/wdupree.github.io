@@ -31,6 +31,9 @@ jobs:
       
       # (Force) push changes to `github-pages` branch
       - run: |
+          git add ./scripts/snowfall.min.js
+          git add ./scripts/base-styles.min.css
+          git add ./scripts/ctc-styles.min.css
           git config user.name wdupree
           git config user.email wdupree@hotmail.com
           git commit -am 'Automated minify of ${{ github.sha }}'
