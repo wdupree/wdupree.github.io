@@ -24,16 +24,13 @@ jobs:
       - run: npm install -g terser
       - run: npm install -g csso-cli
 
-      # Perform minification creating minified files
-      - run: terser ./scripts/snowfall.js --compress --mangle -o ./scripts/snowfall.min.js
-      - run: csso ./styles/base-styles.css -o ./styles/base-styles.min.css
-      - run: csso ./styles/ctc-styles.css -o ./styles/ctc-styles.min.css
+      # Perform minification overwriting existing files
+      - run: terser ./scripts/snowfall.js --compress --mangle -o ./scripts/snowfall.js
+      - run: csso ./styles/base-styles.css -o ./styles/base-styles.css
+      - run: csso ./styles/ctc-styles.css -o ./styles/ctc-styles.css
       
       # (Force) push changes to `github-pages` branch
       - run: |
-          git add ./scripts/snowfall.min.js
-          git add ./styles/base-styles.min.css
-          git add ./styles/ctc-styles.min.css
           git config user.name wdupree
           git config user.email wdupree@hotmail.com
           git commit -am 'Automated minify of ${{ github.sha }}'
