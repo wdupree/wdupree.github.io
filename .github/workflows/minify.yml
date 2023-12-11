@@ -1,11 +1,11 @@
 # This workflow is triggered by a push to the `master` branch
 # which it checks out, minimizes the appropriate css/js
-# and pushes the changes to the `master` branch
+# and pushes the changes to the `github-pages` branch
 
 name: minify
-run-name: Minify JS/CSS [master branch]
+run-name: Minify JS/CSS [github-pages branch]
 
-# Run on pushes to `master` branch
+# Run on pushes to `github-pages` branch
 on:
   push:
     branches:
@@ -34,4 +34,4 @@ jobs:
           git config user.name wdupree
           git config user.email wdupree@hotmail.com
           git commit -am 'Automated minify of ${{ github.sha }}'
-          git push --force -u origin master
+          git push --force -u origin master:github-pages
