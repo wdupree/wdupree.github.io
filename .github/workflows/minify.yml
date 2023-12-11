@@ -1,0 +1,37 @@
+# This workflow is triggered by a push to the `master` branch
+# which it checks out, minimizes the appropriate css/js
+# and pushes the changes to the `github-pages` branch
+
+name: minify
+run-name: Minify JS/CSS [github-pages branch]
+
+# Run on pushes to `master` branch
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  checkout-minify-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # Install NodeJS and CLI tools
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - run: npm install -g terser
+      - run: npm install -g csso-cli
+
+      # Perform minification creating minified files
+      - run: terser ./scripts/snowfall.js --compress --mangle -o ./scripts/snowfall.min.js
+      - run: csso ./styles/base-styles.css -o ./styles/base-styles.min.css
+      - run: csso ./styles/ctc-styles.css -o ./styles/ctc-styles.min.css
+      
+      # (Force) push changes to `github-pages` branch
+      - run: |
+          git config user.name wdupree
+          git config user.email wdupree@hotmail.com
+          git commit -am 'Automated minify of ${{ github.sha }}'
+          git push --force -u origin master:github-pages
