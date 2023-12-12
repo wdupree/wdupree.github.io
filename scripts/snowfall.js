@@ -1,1 +1,186 @@
-!function(){var n=[],t=0;function o(n,t){return Math.floor(Math.random()*(t-n+1))+n}function e(){var o,e=n.length;for(t+=.01,o=0;o<e;o++)i(n[o])}function i(n){var e,i,r=n.style,d=window.innerHeight;e=parseInt(r.border,10),i=parseInt(r.top,10),(i+=Math.cos(t)+1+e/2)>d?function(n){var t=n.style;t.top="0px",t.left=o(0,window.innerWidth)+"px"}(n):r.top=i+"px"}!function(){var t,i,r,d;for(i=0;i<100;i++)t=n[i]=(d=void 0,(d=(r=document.createElement("div")).style).borderRadius="100%",d.border=o(1,4)+"px solid white",d.position="fixed",d.zIndex="999999",d.boxShadow="0 0 2px rgba(255,255,255,0.8)",d.top=o(0,window.innerHeight)+"px",d.left=o(0,window.innerWidth)+"px",r),document.body.appendChild(t);setInterval(e,33)}()}();
+const MAX_SPEED = 5;
+const MIN_SPEED = 10;
+
+const MAX_PATH_WIDTH = 20;
+const MIN_PATH_WIDTH = 50;
+
+const MAX_PATH_HEIGHT = getDocumentHeight();
+const MIN_PATH_HEIGHT = 100;
+const NUM_OBJECTS = 50;
+
+const MAX_SIZE = 32;
+const MIN_SIZE = 20;
+
+const snowflakeImageUrl =
+  "https://whatemoji.org/wp-content/uploads/2020/07/Snowflake-Emoji.png";
+
+let snow = [];
+
+/**
+ * This function is a cross-browser function that gets the document height.
+ * @return Document height if able to find it, otherwise -1.
+ * @see http://www.howtocreate.co.uk/tutorials/javascript/browserwindow
+ */
+function getDocumentHeight() {
+  if (typeof window.innerWidth == "number") {
+    //Non-IE
+    return window.innerHeight;
+  } else if (
+    document.documentElement &&
+    (document.documentElement.clientWidth ||
+      document.documentElement.clientHeight)
+  ) {
+    //IE 6+ in 'standards compliant mode'
+    return document.documentElement.clientHeight;
+  } else if (
+    document.body &&
+    (document.body.clientWidth || document.body.clientHeight)
+  ) {
+    //IE 4 compatible
+    return document.body.clientHeight;
+  } else {
+    // Unable to find height
+    return -1;
+  }
+}
+
+/**
+ * This function is a cross-browser function that gets the document width.
+ * @return Document width if able to find it, otherwise -1.
+ * @see http://www.howtocreate.co.uk/tutorials/javascript/browserwindow
+ */
+function getDocumentWidth() {
+  if (typeof window.innerWidth == "number") {
+    //Non-IE
+    return window.innerWidth;
+  } else if (
+    document.documentElement &&
+    (document.documentElement.clientWidth ||
+      document.documentElement.clientHeight)
+  ) {
+    //IE 6+ in 'standards compliant mode'
+    return document.documentElement.clientWidth;
+  } else if (
+    document.body &&
+    (document.body.clientWidth || document.body.clientHeight)
+  ) {
+    //IE 4 compatible
+    return document.body.clientWidth;
+  } else {
+    // Unable to find width
+    return -1;
+  }
+}
+
+/**
+ * Returns a random number between min and max.
+ * @param number min The lower bound of the range.
+ * @param number max The upper bound of the range.
+ * @return number A random number between min and max.
+ */
+function random(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+function sinGraph(value, height, waveLength) {
+  return height * Math.sin(((2 * Math.PI) / waveLength) * value);
+}
+
+/**
+ * Create a new snow flake object in the specified starting position
+ * @param Image imageObj The image object to be used as a snow flake
+ */
+function SnowFlake(imageObj) {
+  this.imageObj = imageObj;
+  this.interval = null;
+
+  this._reset();
+}
+
+/**
+ * Resets the status of the object with new random values
+ */
+SnowFlake.prototype._reset = function () {
+  let size;
+
+  this.startX = random(0, getDocumentWidth());
+  this.startY = -1 * random(0, getDocumentHeight());
+  this.x = this.startX;
+  this.y = this.startY;
+
+  this.speed = random(MIN_SPEED, MAX_SPEED);
+  this.pathWidth = random(MIN_PATH_WIDTH, MAX_PATH_WIDTH);
+  this.pathHeight = random(MIN_PATH_HEIGHT, MAX_PATH_HEIGHT);
+
+  size = random(MIN_SIZE, MAX_SIZE);
+  this.imageObj.width = size;
+  this.imageObj.height = size;
+};
+
+/**
+ * Starts an infinite animation loop using the given function to move and change the size of the given object.
+ */
+SnowFlake.prototype._animation = function (funcMoveX, funcSizeWidth) {
+  this.y += this.speed;
+
+  if (this.pathWidth === 0 || this.pathHeight === 0) {
+    this.x = funcMoveX(this.y) + this.startX;
+  } else {
+    this.x = funcMoveX(this.y, this.pathWidth, this.pathHeight) + this.startX;
+  }
+
+  // check if snow flake y value is out of the frame
+  if (this.y >= window.innerHeight) {
+    this._reset();
+  } else {
+    this.imageObj.style.top = parseInt(this.y, 10) + "px";
+  }
+
+  if (this.x <= window.innerWidth) {
+    this.imageObj.style.left = parseInt(this.x, 10) + "px";
+  }
+};
+
+/**
+ * Starts the animation for this object. To stop the animation call stopAnimation.
+ */
+SnowFlake.prototype.startAnimation = function () {
+  const that = this;
+  this.interval = setInterval(function () {
+    that._animation(sinGraph, null);
+  }, 100);
+};
+
+/**
+ * Stops the animation for this object. To start the animation again call startAnimation.
+ */
+SnowFlake.prototype.stopAnimation = function () {
+  clearInterval(this.interval);
+};
+
+function initAnimation() {
+  let object;
+  let newElementId;
+  let html = "";
+  let i;
+
+  // add snow flakes images to the html
+  for (i = 0; i < NUM_OBJECTS; i++) {
+    newElementId = "snow" + i;
+    html +=
+      '<img id="' +
+      newElementId +
+      '"src="' +
+      snowflakeImageUrl +
+      '" width="32" height="32" style="position: absolute;" />';
+  }
+
+  document.body.innerHTML += html;
+
+  // initialize the animation for the snow flakes
+  for (i = 0; i < NUM_OBJECTS; i++) {
+    object = document.getElementById("snow" + i);
+    snow.push(new SnowFlake(object));
+    snow[i].startAnimation();
+  }
+}
