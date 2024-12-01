@@ -3,6 +3,10 @@ body {
 	background-color: #181a1b
 }
 
+.card.mb-3 {
+	max-width: 600px;
+}
+
 .card-body {
 	background-color: navy
 }
@@ -10,7 +14,9 @@ body {
 a:active,
 a:link,
 a:visited,
-body {
+body,
+.card-title,
+.card-body {
 	color: #fff
 }
 
