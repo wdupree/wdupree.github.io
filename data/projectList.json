@@ -1,0 +1,40 @@
+{
+    "applications": [
+        {
+            "name": "EV Ownership Analyzer",
+            "githubUrl": "https://waynedupree.visualstudio.com/EV%20Ownership%20Analyzer",
+            "appImage": "images/EV-App.png",
+            "logoImage": "images/EV-Logo.png",
+            "description": "A WinUI 3 application that takes data from the <a href=\"https://wallbox.com/en_us\" target=\"_blank\">Wallbox</a> level 2 charger, <a href=\"https://www.entergy-louisiana.com/\" target=\"_blank\">Entergy</a>, gas price data from the <a href=\"https://www.eia.gov/petroleum/gasdiesel/\" target=\"_blank\">US eia</a> API, and the <a href=\"https://owners.kia.com/content/owners/en/kia-owner-portal.html\" target=\"_blank\">KIA Owners Portal</a> to calculate the cost of ownership of and EV compared to ICE vehicle."
+        },
+        {
+            "name": "La Crosse Weather Data Analyzer",
+            "githubUrl": "https://waynedupree.visualstudio.com/La%20Crosse%20Weather%20Data%20Analyzer",
+            "appImage": "images/LaCrosse-App.png",
+            "logoImage": "images/LaCrosse-Logo.png",
+            "description": "This WinUI3 application was made to parse weather data exported from the <a href=\"https://www.lacrossetechnology.com/pages/la-crosse-view\" target=\"_blank\">La Crosse View</a> mobile app on either <a href=\"https://play.google.com/store/apps/details?id=com.lacrosseview.app\" target=\"_blank\">Android</a> or <a href=\"https://apps.apple.com/us/app/la-crosse-view/id1006925791\" target=\"_blank\">iOS</a> Once loaded, there are readouts for highest and lowest outdoor, feels like temperature, and barometric pressure; highest day and total rain amount and highest wind speed."
+        },
+        {
+            "name": "LEGO Rebrickable Set Inventory",
+            "githubUrl": "https://waynedupree.visualstudio.com/LEGO%20Rebrickable%20Set%20Inventory",
+            "appImage": "images/LEGOInventory-App.png",
+            "logoImage": "images/LEGOInventory-Logo.png",
+            "description": "This WinUI3 application was made to open exported parts lists from <a href=\"https://www.rebrickable.com\" target=\"_blank\">Rebrickable</a> and provide a local database of parts owned, still needed and other statistical information about the parts for the custom LEGO set."
+        },
+        {
+            "name": "Plex Database Parser",
+            "githubUrl": "https://waynedupree.visualstudio.com/",
+            "appImage": "images/PlexParser-App.png",
+            "logoImage": "images/PlexParser-Logo.png",
+            "description": "This WinUI3 application was created to replace the manual <a href=\"https://office.live.com/start/Excel.aspx\" target=\"_blank\">Microsoft Excel</a> spreadsheet being used to inventory movies, holiday specials, TV shows, etc. on the <a href=\"https://www.plex.tv/\" target=\"_blank\">Plex</a> <a href=\"https://shop.westerndigital.com/products/network-attached-storage/wd-my-cloud-pro-series-pr2100#WDBBCL0000NBK-NESN\" target=\"_blank\">MyCloud Pro Series PR2100</a>. The application can parse the available libraries on the Plex server and then export the results to Excel to be shared."
+        }
+    ],
+    "sites": [
+        {
+            "name": "Cracking the Cryptic Statistics Page",
+            "websiteUrl": "ctc-statistics.html",
+            "logoImage": "images/CtC-Logo.png",
+            "description": "This page is a public rendering of the data created from the Cracking the Cryptic application (<a href=\"https://waynedupree.visualstudio.com/CtC%20Simarkism%20Analyzer\" target=\"_blank\">repo here</a>) I made to parse all of statistics in \"Inspiring Sand's\" comments on their YouTube videos."
+        }
+    ]
+}
