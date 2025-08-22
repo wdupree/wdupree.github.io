@@ -1,25 +1,17 @@
 body {
 	font-family: "Lato", sans-serif;
-	background-color: #181a1b
 }
 
-.card.mb-3 {
+img.app-icon {
+	height: 20px;
+	width: 20px;
+}
+
+.img-fluid.rounded-start {
+	background: white;
+	padding-bottom: 14px;
+}
+
+.card {
 	max-width: 600px;
-}
-
-.card-body {
-	background-color: navy
-}
-
-a:active,
-a:link,
-a:visited,
-body,
-.card-title,
-.card-body {
-	color: #fff
-}
-
-a:hover {
-	color: #0ff
 }
