@@ -1,13 +1,6 @@
 a:active,
 a:link,
-a:visited {
-    color: #00f
-}
-
-a:hover {
-    color: #008b8b
-}
-
+a:visited,
 #simarkismStats a:active,
 #simarkismStats a:link,
 #simarkismStats a:visited,
@@ -15,8 +8,15 @@ table a {
     color: #fff
 }
 
+a:hover,
 #simarkismStats a:hover {
     color: #0ff
+}
+
+.dataTables_info,
+.dataTables_length,
+.dataTables_filter {
+    color: #fff !important;
 }
 
 h6 {
@@ -37,14 +37,9 @@ hr {
     width: 65%
 }
 
-.card-body {
-    background-color: #f5f5f5
-}
-
 div.card,
 div.stats-header {
     margin-bottom: 25px;
-    color: #000
 }
 
 div.card.card-header {

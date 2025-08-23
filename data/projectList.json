@@ -5,14 +5,14 @@
             "githubUrl": "https://waynedupree.visualstudio.com/EV%20Ownership%20Analyzer",
             "appImage": "images/EV-App.png",
             "logoImage": "images/EV-Logo.png",
-            "description": "A WinUI 3 application that takes data from the <a href=\"https://wallbox.com/en_us\" target=\"_blank\">Wallbox</a> level 2 charger, <a href=\"https://www.entergy-louisiana.com/\" target=\"_blank\">Entergy</a>, gas price data from the <a href=\"https://www.eia.gov/petroleum/gasdiesel/\" target=\"_blank\">US eia</a> API, and the <a href=\"https://owners.kia.com/content/owners/en/kia-owner-portal.html\" target=\"_blank\">KIA Owners Portal</a> to calculate the cost of ownership of and EV compared to ICE vehicle."
+            "description": "A WinUI 3 application that takes data from the <a href=\"https://wallbox.com/en_us\" target=\"_blank\">Wallbox</a> level 2 charger, <a href=\"https://www.entergy-louisiana.com/\" target=\"_blank\">Entergy</a>, gas price data from the <a href=\"https://www.eia.gov/petroleum/gasdiesel/\" target=\"_blank\">US eia</a> API, and the <a href=\"https://owners.kia.com/content/owners/en/kia-owner-portal.html\" target=\"_blank\">KIA Owners Portal</a> to calculate the cost of ownership of an EV compared to an ICE vehicle."
         },
         {
             "name": "La Crosse Weather Data Analyzer",
             "githubUrl": "https://waynedupree.visualstudio.com/La%20Crosse%20Weather%20Data%20Analyzer",
             "appImage": "images/LaCrosse-App.png",
             "logoImage": "images/LaCrosse-Logo.png",
-            "description": "This WinUI3 application was made to parse weather data exported from the <a href=\"https://www.lacrossetechnology.com/pages/la-crosse-view\" target=\"_blank\">La Crosse View</a> mobile app on either <a href=\"https://play.google.com/store/apps/details?id=com.lacrosseview.app\" target=\"_blank\">Android</a> or <a href=\"https://apps.apple.com/us/app/la-crosse-view/id1006925791\" target=\"_blank\">iOS</a> Once loaded, there are readouts for highest and lowest outdoor, feels like temperature, and barometric pressure; highest day and total rain amount and highest wind speed."
+            "description": "This WinUI3 application was made to parse weather data exported from the <a href=\"https://www.lacrossetechnology.com/pages/la-crosse-view\" target=\"_blank\">La Crosse View</a> mobile app on either <a href=\"https://play.google.com/store/apps/details?id=com.lacrosseview.app\" target=\"_blank\">Android</a> or <a href=\"https://apps.apple.com/us/app/la-crosse-view/id1006925791\" target=\"_blank\">iOS</a>. Once loaded, there are readouts for highest and lowest outdoor, feels like temperature, and barometric pressure; highest day and total rain amount and highest wind speed."
         },
         {
             "name": "LEGO Rebrickable Set Inventory",

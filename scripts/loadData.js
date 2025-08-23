@@ -1,12 +1,12 @@
 fetch("/data/projectList.json")
   .then((response) => {
     if (!response.ok) {
-      throw new Error("Network response was not ok " + response.statusText);
+      throw new Error("Failed to load JSON file");
     }
-    return response.json(); // Parse JSON from the response
+    return response.json();
   })
   .then((data) => {
-    const viewModel = ko.mapping.fromJS(data); // Load the data into the observable array
+    const viewModel = ko.mapping.fromJS(data);
     ko.applyBindings(viewModel);
   })
   .catch((error) => {

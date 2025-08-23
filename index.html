@@ -14,56 +14,110 @@
 <body>
     <div class="container">
         <h1 class="display-2">GitHub Project Listing</h1>
-        <p class="lead">This is a listing of my GitHub projects and content. From here, you can go to the following
-            places:</p>
+        <p class="lead">This is a listing of my GitHub projects and content. Select a pill on the left to see all
+            the
+            projects I have worked on.</p>
+        <hr />
     </div>
     <div class="container">
-        <h2>Web Content</h2>
-        <div class="row row-cols-1 row-cols-md-2 g-4" data-bind="foreach: sites">
-            <div class="col">
-                <div class="card mb-3">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img class="img-fluid rounded-start" data-bind="attr: { src: logoImage, alt: name }">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title" data-bind="text: name"></h5>
-                                <p class="card-text" data-bind="html: description"></p>
-                                <a class="btn btn-primary" data-bind="text: name, attr: { href: websiteUrl }"></a>
+        <div class="row align-items-start">
+            <div class="nav col-2 nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active" id="v-pills-current-apps-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-current-apps" type="button" role="tab" aria-controls="v-pills-current-apps"
+                    aria-selected="false">Current
+                    Applications</button>
+                <button class="nav-link" id="v-pills-nuget-packages-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-nuget-packages" type="button" role="tab"
+                    aria-controls="v-pills-nuget-packages" aria-selected="false">Nuget Packages</button>
+                <button class="nav-link" id="v-pills-web-sites-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-web-sites" type="button" role="tab" aria-controls="v-pills-web-sites"
+                    aria-selected="true">Web Sites</button>
+                <button class="nav-link" id="v-pills-deprecated-apps-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-deprecated-apps" type="button" role="tab"
+                    aria-controls="v-pills-deprecated-apps" aria-selected="false">Deprecated
+                    Applications</button>
+            </div>
+            <div class="tab-content col mb-4" id="v-pills-tabContent">
+                <div class="tab-pane fade show active" id="v-pills-current-apps" role="tabpanel"
+                    aria-labelledby="v-pills-current-apps-tab" tabindex="0">
+                    <h2 class="text-center">Current Applications</h2>
+                    <p class="text-center">A listing of all of the applications that I am currently working on and
+                        using.</p>
+                    <hr />
+                    <div class="row row-cols-1 row-cols-md-2 g-4" data-bind="foreach: applications">
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body p-0">
+                                    <div class="d-flex flex-row m-0 p-2">
+                                        <div class="me-2"><img class="app-icon"
+                                                data-bind="attr: { src: logoImage, alt: name }">
+                                        </div>
+                                        <div class="d-flex align-items-center m-0 fs-6" data-bind="text: name">
+                                        </div>
+                                    </div>
+                                    <img class="img-fluid" data-bind="attr: { src: appImage, alt: name }" />
+                                    <div class="card-text p-3 fs-5" data-bind="html: description"></div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="m-2 text-center">
+                                        <a class="btn btn-primary" target="_blank"
+                                            data-bind="attr: { href: githubUrl }"><span
+                                                class="d-flex align-items-center">Github
+                                                Project&nbsp;<img src="images/External-Link-Icon.png"
+                                                    data-bind="attr: { alt: name }"></span></a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <hr />
-        <h2>Personal Application Projects</h2>
-        <div class="row row-cols-1 row-cols-md-2 g-4" data-bind="foreach: applications">
-            <div class="col">
-                <div class="card h-100">
-                    <div class="card-body p-0">
-                        <div class="d-flex flex-row m-0 p-2">
-                            <div class="me-2"><img class="app-icon" data-bind="attr: { src: logoImage, alt: name }">
+                <div class="tab-pane fade" id="v-pills-nuget-packages" role="tabpanel"
+                    aria-labelledby="v-pills-nuget-packages-tab" tabindex="0">
+                    <h2 class="text-center">Nuget Packages</h2>
+                    <p class="text-center">A listing of all of personal Nuget Packages I have created and what
+                        they're
+                        used for.</p>
+                    <hr />
+                    <p>Coming Soon...</p>
+                </div>
+                <div class="tab-pane fade" id="v-pills-web-sites" role="tabpanel"
+                    aria-labelledby="v-pills-web-sites-tab" tabindex="0">
+                    <h2 class="text-center">Web Sites</h2>
+                    <p class="text-center">Web sites I am currently working on.</p>
+                    <hr />
+                    <div class="row row-cols-1 row-cols-md-2 g-4" data-bind="foreach: sites">
+                        <div class="col">
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img class="img-fluid rounded-start"
+                                            data-bind="attr: { src: logoImage, alt: name }">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title" data-bind="text: name"></h5>
+                                            <p class="card-text" data-bind="html: description"></p>
+                                            <a class="btn btn-primary"
+                                                data-bind="text: name, attr: { href: websiteUrl }"></a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="d-flex align-items-center m-0 fs-6" data-bind="text: name"></div>
-                        </div>
-                        <img class="img-fluid" data-bind="attr: { src: appImage, alt: name }" />
-                        <div class="card-text p-3 fs-5" data-bind="html: description"></div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="m-2 text-center">
-                            <a class="btn btn-primary" target="_blank" data-bind="attr: { href: githubUrl }"><span
-                                    class="d-flex align-items-center">Github
-                                    Project&nbsp;<img src="images/External-Link-Icon.png"
-                                        data-bind="attr: { alt: name }"></span></a>
                         </div>
                     </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-deprecated-apps" role="tabpanel"
+                    aria-labelledby="v-pills-deprecated-apps-tab" tabindex="0">
+                    <h2 class="text-center">Deprecated Applications</h2>
+                    <p class="text-center">A listing of all of the applications that I created but are no longer used
+                        or
+                        maintained.</p>
+                    <hr />
+                    <p>Coming Soon...</p>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
