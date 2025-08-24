@@ -1,6 +1,13 @@
 {
     "applications": [
         {
+            "name": "Cracking the Cryptic 'Simarkism' Analyzer",
+            "githubUrl": "https://waynedupree.visualstudio.com/CtC%20Simarkism%20Analyzer",
+            "appImage": "images/CtC-App.png",
+            "logoImage": "images/CtC-Logo.png",
+            "description": "A WinUI 3 application uses the <a href=\"https: //developers.google.com/youtube/v3\" target=\"_blank\">YouTube API</a> to scan all the videos on the <a href=\"https://www.youtube.com/@CrackingTheCryptic\" target=\"_blank\">Cracking the Cryptic channel</a>, searching for comments from \"Inspiring Sand\" and uses this data to compile statistics of \"Simarkisms\", total solve times and more. The application can also generate HTML that is then uploaded to my <a href=\"ctc-statistics.html\">GitHub page</a> so anyone can view the current statistics."
+        },
+        {
             "name": "EV Ownership Analyzer",
             "githubUrl": "https://waynedupree.visualstudio.com/EV%20Ownership%20Analyzer",
             "appImage": "images/EV-App.png",
@@ -23,10 +30,27 @@
         },
         {
             "name": "Plex Database Parser",
-            "githubUrl": "https://waynedupree.visualstudio.com/",
+            "githubUrl": "https://waynedupree.visualstudio.com/Plex%20Database%20Parser",
             "appImage": "images/PlexParser-App.png",
             "logoImage": "images/PlexParser-Logo.png",
             "description": "This WinUI3 application was created to replace the manual <a href=\"https://office.live.com/start/Excel.aspx\" target=\"_blank\">Microsoft Excel</a> spreadsheet being used to inventory movies, holiday specials, TV shows, etc. on the <a href=\"https://www.plex.tv/\" target=\"_blank\">Plex</a> <a href=\"https://shop.westerndigital.com/products/network-attached-storage/wd-my-cloud-pro-series-pr2100#WDBBCL0000NBK-NESN\" target=\"_blank\">MyCloud Pro Series PR2100</a>. The application can parse the available libraries on the Plex server and then export the results to Excel to be shared."
+        }
+    ],
+    "nugets": [
+        {
+            "name": "WinUI AppInfo Component",
+            "githubUrl": "",
+            "description": "This is an Application Information modal that can be added to WinUI applications to display basic information about the application and environment including the application version, local device information and a shortcut to the application's local state (for logs, backups, etc.)."
+        },
+        {
+            "name": "WinUI BaseApp Utilities and Helpers",
+            "githubUrl": "",
+            "description": "Basic application DI, logging, utilities and helpers for all WinUI applications including: <ul><li>Scanning all Interfaces and adding Classes and ViewModels</li><li>Application and secret settings by default</li><li>Loads <a href=\"https://serilog.net/\" target=\"_blank\">Serilog</a> by default</li><li>Storage Extensions</li><li>General Utility Extensions</li><li>XAML Helper Extensions</li>"
+        },
+        {
+            "name": "WinUI HttpClient",
+            "githubUrl": "",
+            "description": "Base HTTP Client implementation for WinUI applications including:<li>GET</li><li>POST<li>GetFile</li><li>GetImage</li><li>Setting of cookies and headers</li>"
         }
     ],
     "sites": [
