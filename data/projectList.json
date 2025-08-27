@@ -36,6 +36,13 @@
             "description": "This WinUI3 application was made to open exported parts lists from <a href=\"https://www.rebrickable.com\" target=\"_blank\">Rebrickable</a> and provide a local database of parts owned, still needed and other statistical information about the parts for the custom LEGO set."
         },
         {
+            "name": "Nuget Package Dashboard",
+            "githubUrl": "https://waynedupree.visualstudio.com/Nuget%20Package%20Desktop",
+            "appImage": "images/NugetDashboard-App.png",
+            "logoImage": "images/Nuget-Logo.png",
+            "description": "This application searches a local folder for all the C# project files that are available and then parses the project and package files to check for the current status of any <a href=\"https://www.nuget.org/packages\" target=\"_blank\">Nuget packages</a> (non-transitive) and also allows secret settings files to be uploaded to a personal <a href=\"https://gist.github.com/\" target=\"_blank\">Gist</a> location on <a href=\"https://github.com/\" target=\"_blank\">GitHub</a>."
+        },
+        {
             "name": "Plex Database Parser",
             "githubUrl": "https://waynedupree.visualstudio.com/Plex%20Database%20Parser",
             "appImage": "images/PlexParser-App.png",
