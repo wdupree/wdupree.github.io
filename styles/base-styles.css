@@ -1,12 +1,1 @@
-body {
-	font-family: "Lato", sans-serif;
-}
-
-img.app-icon {
-	height: 20px;
-	width: 20px;
-}
-
-.img-fluid.rounded-start {
-	background: white;
-}
+body{font-family:"Lato",sans-serif}img.app-icon{height:20px;width:20px}.img-fluid.rounded-start{background:#fff}
