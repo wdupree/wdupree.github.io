@@ -5,7 +5,7 @@ const snowMax = 300;
 const snowColor = ["#ccc", "#eee", "#fff", "#ddd"];
 
 // Snow Entity
-const snowEntity = "&#x2022;";
+const snowEntity = '<i class="bi bi-snow2"></i>';
 
 // Falling Velocity
 const snowSpeed = 2;
